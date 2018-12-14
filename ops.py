@@ -1,17 +1,17 @@
 import tensorflow as tf
 from tensorflow.contrib.layers.python.layers import batch_norm
-import warnings
 
 def log_sum_exp(x, axis=1):
     m = tf.reduce_max(x, keep_dims=True)
     return m + tf.log(tf.reduce_sum(tf.exp(x - m), axis=axis))
 
-#the implements of leakyRelu
-def lrelu(x, alpha= 0.2, name="LeakyReLU"):
+#leakyRelu
+def lrelu(x, alpha= 0.2):
     return tf.maximum(x , alpha*x)
 
+#conv2d
 def conv2d(input_, output_dim,
-           k_h=5, k_w=5, d_h= 2, d_w=2, stddev=0.02,
+           k_h=3, k_w=3, d_h= 2, d_w=2, stddev=0.02,
            name="conv2d", use_sp=False, padding='SAME'):
 
     with tf.variable_scope(name):
@@ -27,16 +27,22 @@ def conv2d(input_, output_dim,
 
         return conv
 
+#avgpool
+def downscale2d(x, k=2):
 
+    return tf.nn.avg_pool(x, ksize=[1, k, k, 1], strides=[1, k, k, 1],
+                    padding='VALID')
+
+#dilated conv2d
 def dilated_conv2d(input_, output_dim,
            k_h=3, k_w=3, stddev=0.02, rate=2,
-           name="conv2d", use_sp=True, padding='SAME'):
+           name="conv2d", use_sp=False, padding='SAME'):
 
     with tf.variable_scope(name):
         w = tf.get_variable('w', [k_h, k_w, input_.get_shape()[-1], output_dim],
                             initializer=tf.random_normal_initializer(stddev=stddev))
         if use_sp != True:
-            conv = tf.nn.atrous_conv2d(input_, w, rate=2, padding=padding)
+            conv = tf.nn.atrous_conv2d(input_, w, rate=rate, padding=padding)
         else:
             conv = tf.nn.atrous_conv2d(input_, spectral_norm(w), rate=rate, padding=padding)
 
@@ -48,6 +54,7 @@ def dilated_conv2d(input_, output_dim,
 def instance_norm(input, scope="instance_norm"):
 
     with tf.variable_scope(scope):
+
         depth = input.get_shape()[3]
         scale = tf.get_variable("scale", [depth], initializer=tf.random_normal_initializer(1.0, 0.02, dtype=tf.float32))
         offset = tf.get_variable("offset", [depth], initializer=tf.constant_initializer(0.0))
@@ -68,12 +75,10 @@ def weight_normalization(weight, scope='weight_norm'):
     raise ValueError('dimensions unacceptable for weight normalization')
 
   with tf.variable_scope(scope):
-
     g = tf.get_variable('g_scalar', shape=g_shape, initializer = tf.ones_initializer())
     weight = g * tf.nn.l2_normalize(weight, dim=0)
 
     return weight
-
 
 def de_conv(input_, output_shape,
              k_h=3, k_w=3, d_h=2, d_w=2, stddev=0.02, use_sp=False,
@@ -119,11 +124,11 @@ def resize_nearest_neighbor(x, new_size):
     x = tf.image.resize_nearest_neighbor(x, new_size)
     return x
 
-def fully_connect(input_, output_size, scope=None, stddev=0.02, use_sp=True,
+def fully_connect(input_, output_size, name=None, stddev=0.02, use_sp=True,
                   bias_start=0.0, with_w=False):
 
   shape = input_.get_shape().as_list()
-  with tf.variable_scope(scope or "Linear"):
+  with tf.variable_scope(name or "Linear"):
     matrix = tf.get_variable("Matrix", [shape[1], output_size], tf.float32,
                  tf.random_normal_initializer(stddev=stddev))
     bias = tf.get_variable("bias", [output_size], tf.float32,
@@ -144,24 +149,26 @@ def conv_cond_concat(x, y):
     y_shapes = y.get_shape()
     return tf.concat([x , y*tf.ones([x_shapes[0], x_shapes[1], x_shapes[2] , y_shapes[3]])], 3)
 
-def batch_normal(input , scope="scope" , reuse=False):
+def batch_normal(input, scope="scope", reuse=False):
     return batch_norm(input , epsilon=1e-5, decay=0.9 , scale=True, scope=scope , reuse=reuse, fused=True, updates_collections=None)
 
 def Residual(x, output_dims=256, kernel=3, residual_name='resi'):
 
     with tf.variable_scope('residual_{}'.format(residual_name)):
+
         conv1 = instance_norm(dilated_conv2d(x, output_dims, k_h=kernel, k_w=kernel, name="conv1"), scope='in1')
         conv2 = instance_norm(dilated_conv2d(tf.nn.relu(conv1), output_dims, k_h=kernel, k_w=kernel, name="conv2"), scope='in2')
         resi = x + conv2
+
         return tf.nn.relu(resi)
 
 
 NO_OPS = 'NO_OPS'
-
 def _l2normalize(v, eps=1e-12):
   return v / (tf.reduce_sum(v ** 2) ** 0.5 + eps)
 
 def spectral_norm(W, collections=None, return_norm=False, name='sn'):
+
     shape = W.get_shape().as_list()
     if len(shape) == 1:
         sigma = tf.reduce_max(tf.abs(W))
