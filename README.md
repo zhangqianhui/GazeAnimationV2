@@ -39,8 +39,6 @@ git clone https://github.com/zhangqianhui/Eye_Rotation_GAN.git
 
 Coming soon!!!
 
-and unzip CelebA-ID into a directory. 
-
 - Train the model using the default parameter
 ```bash
 python main.py 
