@@ -5,12 +5,6 @@ The code of paper "Self-Guided Eye Rotation for attention Rectification using Pr
 ![](img/gif/gif2/age.gif)
 ![](img/gif/gif3/age.gif)
 
---------------------
-![](img/gif/gif4/age.gif)
-![](img/gif/gif5/age.gif)
-![](img/gif/gif6/age.gif)
-
-
 # Introduction
 
 Eye rotation has a wide range of applications in the real life. For example,
@@ -56,6 +50,15 @@ python main.py
 # The process of Experiments
 
 ![](img/output.jpg)
+
+# More Results
+
+![](img/gif/gif4/age.gif)
+![](img/gif/gif5/age.gif)
+![](img/gif/gif6/age.gif)
+![](img/gif/gif7/age.gif)
+![](img/gif/gif8/age.gif)
+![](img/gif/gif9/age.gif)
             
 # Reference code
 
