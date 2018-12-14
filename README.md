@@ -55,7 +55,7 @@ python main.py
 
 # The process of Experiments
 
-![](img/output.pdf)
+![](img/output.jpg)
             
 # Reference code
 
