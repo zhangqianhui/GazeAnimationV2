@@ -59,7 +59,10 @@ python main.py
   <img src="/img/outpout.pdf>
 </p>
             
-## Reference code
+# Reference code
+
+
+[Sparsely_Grouped_GAN](https://github.com/zhangqianhui/Sparsely-Grouped-GAN)
 
 [DCGAN tensorflow](https://github.com/carpedm20/DCGAN-tensorflow)
 
