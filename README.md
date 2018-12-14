@@ -59,6 +59,9 @@ python main.py
 ![](img/gif/gif7/age.gif)
 ![](img/gif/gif8/age.gif)
 ![](img/gif/gif9/age.gif)
+![](img/gif/gif10/age.gif)
+![](img/gif/gif11/age.gif)
+![](img/gif/gif12/age.gif)
             
 # Reference code
 
