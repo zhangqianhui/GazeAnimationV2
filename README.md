@@ -53,7 +53,7 @@ python main.py
 ```
 
 
-# Our results
+# The process of Experiments
 
 <p align="center">
   <img src="/img/outpout.pdf>
@@ -61,13 +61,12 @@ python main.py
             
 ## Reference code
 
-[Sparsely_Grouped_GAN](https://github.com/zhangqianhui/Sparsely_Grouped_GAN)
+[Sparsely_Grouped_GAN](https://github.com/zhangqianhui/Sparsely-Grouped-GAN.git)
 
 [DCGAN tensorflow](https://github.com/carpedm20/DCGAN-tensorflow)
 
 [Spectral Norm tensorflow](https://github.com/taki0112/Spectral_Normalization-Tensorflow)
 
 [Exemplar-GAN-Eye-Inpainting-Tensorflow](https://github.com/zhangqianhui/Exemplar-GAN-Eye-Inpainting-Tensorflow.git)
-
 
 
