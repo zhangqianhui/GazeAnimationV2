@@ -55,10 +55,7 @@ python main.py
 
 # The process of Experiments
 
-<p align="center">
-  <img src="/img/outpout.pdf>
-</p>
-
+![](img/output.pdf)
             
 # Reference code
 
