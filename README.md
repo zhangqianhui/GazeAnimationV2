@@ -59,7 +59,7 @@ python main.py
 ![](img/gif/gif9/age.gif)
 ![](img/gif/gif10/age.gif)
 ![](img/gif/gif11/age.gif)
-![](img/gif/gif12/age.gif)
+![](img/gif/age.gif)
             
 # Reference code
 
@@ -71,4 +71,4 @@ python main.py
 
 - [Exemplar-GAN-Eye-Inpainting-Tensorflow](https://github.com/zhangqianhui/Exemplar-GAN-Eye-Inpainting-Tensorflow.git)
 
-
+- [ELEGANT](https://github.com/Prinsphield/ELEGANT)
