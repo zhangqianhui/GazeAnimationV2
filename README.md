@@ -1,6 +1,11 @@
 # Self-Guided Eye Rotation for Attention Rectification using Progressive Growing Generative Adversarial Networks
 The code of paper "Self-Guided Eye Rotation for Attention Rectification using Progressive Growing Generative Adversarial Networks". Paper will published coming soon.
 
+--------------------------------------------
+
+![](img/t_input.jpg)
+![](img/t_output.jpg)
+
 ![](img/gif/gif1/age.gif)
 ![](img/gif/gif2/age.gif)
 ![](img/gif/gif3/age.gif)
