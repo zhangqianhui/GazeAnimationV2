@@ -3,8 +3,8 @@ The code of paper "Self-Guided Eye Rotation for Attention Rectification using Pr
 
 --------------------------------------------
 
-![](img/t_input.jpg)
-![](img/t_output.jpg)
+![](img/t_input2.jpg)
+![](img/t_output2.jpg)
 
 ![](img/gif/gif1/age.gif)
 ![](img/gif/gif2/age.gif)
