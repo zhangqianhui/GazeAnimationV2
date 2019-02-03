@@ -1,5 +1,5 @@
 # GazeCorretion: Self-Guided Eye Manipulation in the wild using Generative Adversarial Networks
-The code of paper "Self-Guided Eye Rotation for Attention Rectification using Progressive Growing Generative Adversarial Networks". Paper will published coming soon.
+The code of paper "GazeCorretion: Self-Guided Eye Manipulation in the wild using Generative Adversarial Networks". Paper will published coming soon.
 
 --------------------------------------------
 
