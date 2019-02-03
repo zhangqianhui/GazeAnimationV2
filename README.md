@@ -1,5 +1,5 @@
 # GazeCorretion: Self-Guided Eye Manipulation in the wild using Generative Adversarial Networks
-The code of paper "GazeCorretion: Self-Guided Eye Manipulation in the wild using Generative Adversarial Networks". Paper will published coming soon.
+The code of paper "GazeCorrection: Self-Guided Eye Manipulation in the wild using Generative Adversarial Networks". Paper will published coming soon.
 
 --------------------------------------------
 
@@ -12,7 +12,7 @@ The code of paper "GazeCorretion: Self-Guided Eye Manipulation in the wild using
 
 # Introduction
 
-Eye rotation has a wide range of applications in the real life. For example,
+Gaze correction has a wide range of applications in the real life. For example,
 this techniques can be applied for eye attention rectification for formal
 personal or group photograph. We do not found effective methods for this problem.
 In this paper, we proposed a new eye rotation algorithm for fast
