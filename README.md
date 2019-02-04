@@ -14,9 +14,9 @@ The code of paper "GazeCorrection: Self-Guided Eye Manipulation in the wild usin
 
 Gaze correction aims to redirect person's gaze into the camera by manipulating the eye region and it can be considered 
 as a specific image resynthesis problems. Gaze correction has a wide range of applications in real life, for example the eye contract of
-remote users in video conference systems. We proposed a new simple but effective model which does not require the training dataset labelling with 
-the head pose and eye angle information. Our proposed model is based on the generative adversarial networks
- and leverage encode-decode networks to learn the mapping from
+remote users in video conference systems. We proposed a simple but effective model which does not require the training dataset labelling with 
+the head pose and eye angle information, even the majority training data not have the corresponding groundtruth between the different domains. Our proposed model is based on the generative adversarial networks
+ and leverage encode-decode to learn the mapping from
 the input facial image without the eye region to the facial image with corrected eye region.
 Moreover, we propose a self-guided method to preserve the identity information of the in-painted images.
 A new dataset has been collected for training and will be introduced in details.
