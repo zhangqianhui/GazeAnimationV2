@@ -1,4 +1,4 @@
-# GazeCorretion: Self-Guided Eye Manipulation in the wild using Generative Adversarial Networks
+# GazeCorrection: Self-Guided Eye Manipulation in the wild using Generative Adversarial Networks
 The code of paper "GazeCorrection: Self-Guided Eye Manipulation in the wild using Generative Adversarial Networks". Paper will published coming soon.
 
 --------------------------------------------
