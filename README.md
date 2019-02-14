@@ -23,7 +23,8 @@ A new dataset has been collected for training and will be introduced in details.
 
 ## Network Architecture
 
-Coming soon
+![](img/model.jpg)
+
 
 ## 
 
