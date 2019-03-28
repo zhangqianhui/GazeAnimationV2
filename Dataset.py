@@ -16,7 +16,7 @@ class Dataset(object):
         self.capacity = config.capacity
         self.shuffle = config.shuffle
 
-        print "Dataset.py Test code"
+        print ("Dataset.py Test code")
         print self.data_dir, self.height, self.width, self.channel
         print self.batch_size, self.num_threads, self.capacity, self.shuffle
 
