@@ -53,18 +53,6 @@ python main.py
 
 ![](img/output.jpg)
 
-# More Results
-
-![](img/gif/gif4/age.gif)
-![](img/gif/gif5/age.gif)
-![](img/gif/gif6/age.gif)
-![](img/gif/gif7/age.gif)
-![](img/gif/gif8/age.gif)
-![](img/gif/gif9/age.gif)
-![](img/gif/gif10/age.gif)
-![](img/gif/gif11/age.gif)
-![](img/gif/age.gif)
-            
 # Reference code
 
 - [Sparsely_Grouped_GAN](https://github.com/zhangqianhui/Sparsely-Grouped-GAN)
