@@ -41,17 +41,20 @@ from the website and will be introduced in details.
 
 - Clone this repo:
 ```bash
-git clone https://github.com/zhangqianhui/Eye_Rotation_GAN.git
+git clone https://github.com/zhangqianhui/GazeCorrection.git
 ```
-- Download the Eye_Rotation dataset
+- Download the NewGaze dataset
 
 Coming soon!!!
+
+-Pretraining Model
+
+--Coming soon!!!
 
 - Train the model using the default parameter
 ```bash
 python main.py 
 ```
-
 
 # Experiments results
 
@@ -74,7 +77,7 @@ python main.py
 ![](img/13.gif)
 ![](img/14.gif)
 ![](img/15.gif)
-![](img/16.gif)
+
 
 
 # Reference code
@@ -83,8 +86,4 @@ python main.py
 
 - [DCGAN tensorflow](https://github.com/carpedm20/DCGAN-tensorflow)
 
-- [Spectral Norm tensorflow](https://github.com/taki0112/Spectral_Normalization-Tensorflow)
-
 - [Exemplar-GAN-Eye-Inpainting-Tensorflow](https://github.com/zhangqianhui/Exemplar-GAN-Eye-Inpainting-Tensorflow.git)
-
-- [ELEGANT](https://github.com/Prinsphield/ELEGANT)
