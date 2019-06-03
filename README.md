@@ -12,10 +12,6 @@ The code of paper [GazeCorrection:Self-Guided Eye Manipulation in the wild using
 
 ### [Project page](https://nips2019.wixsite.com/gazegan) | [Paper](https://arxiv.org/) | 
 
-![](img/gif/gif1/age.gif)
-![](img/gif/gif2/age.gif)
-![](img/gif/gif3/age.gif)
-
 # Abstract
 Gaze correction aims to redirect the person's gaze into the camera by manipulating the eye region, and
 it can be considered as a specific image resynthesis problem. Gaze correction has a wide
@@ -57,9 +53,29 @@ python main.py
 ```
 
 
-# The process of Experiments
+# Experiments results
 
-![](img/output.jpg)
+![](img/exp1.jpg)
+
+# More results(GiF)
+
+![](img/one.gif)
+![](img/two.gif)
+![](img/three.gif)
+![](img/four.gif)
+![](img/five.gif)
+![](img/six.gif)
+![](img/seven.gif)
+![](img/eight.gif)
+![](img/nine.gif)
+![](img/ten.gif)
+![](img/11.gif)
+![](img/12.gif)
+![](img/13.gif)
+![](img/14.gif)
+![](img/15.gif)
+![](img/16.gif)
+
 
 # Reference code
 
