@@ -47,11 +47,12 @@ git clone https://github.com/zhangqianhui/GazeCorrection.git
 
 Coming soon!!!
 
--- Pretraining Model
+- Pretraining Model
 
--- Coming soon!!!
+- Coming soon!!!
 
--- Train the model using the default parameter
+- Train the model using the default parameter
+
 ```bash
 python main.py 
 ```
