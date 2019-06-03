@@ -5,8 +5,8 @@ The code of paper [GazeCorrection:Self-Guided Eye Manipulation in the wild using
 
 ### [Project page](https://nips2019.wixsite.com/gazegan) | [Paper](https://arxiv.org/) | 
 
-![](img/t_input2.jpg)
-![](img/t_output2.jpg)
+![](img/1.jpg)
+![](img/2.jpg)
 
 ![](img/gif/gif1/age.gif)
 ![](img/gif/gif2/age.gif)
