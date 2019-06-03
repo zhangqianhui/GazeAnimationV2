@@ -27,7 +27,7 @@ from the website and will be introduced in details.
 
 ## Network Architecture
 
-![](img/model.jpg)
+![](img/model.png)
 
 
 ## 
