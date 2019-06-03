@@ -45,11 +45,11 @@ git clone https://github.com/zhangqianhui/GazeCorrection.git
 ```
 - Download the NewGaze dataset
 
-Coming soon!!!
+  Coming soon!!!
 
 - Pretraining Model
 
-- Coming soon!!!
+  We have provided the self-guided pretraining model in directory: ./sg_pre_model_g
 
 - Train the model using the default parameter
 
