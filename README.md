@@ -3,6 +3,8 @@ The code of paper [GazeCorrection:Self-Guided Eye Manipulation in the wild using
 
 --------------------------------------------
 
+### [Project page](http://disi.unitn.it/~hao.tang/project/SelectionGAN.html) | [Paper](https://arxiv.org/abs/1904.06807) | [Slides](http://disi.unitn.it/~hao.tang/uploads/slides/SelectionGAN_CVPR19.pptx) | [Video](http://disi.unitn.it/~hao.tang/uploads/videos/SelectionGAN_CVPR19.mp4) | [Poster](http://disi.unitn.it/~hao.tang/uploads/posters/SelectionGAN_CVPR19.pdf)
+
 ![](img/t_input2.jpg)
 ![](img/t_output2.jpg)
 
