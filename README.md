@@ -53,6 +53,9 @@ git clone https://github.com/zhangqianhui/GazeCorrection.git
 
 - Train the model using the default parameter
 
+  (1)Please edit the config.py file to select the proper hyper-parameters.
+  (2)Change the "base_path" to your path of NewGaze dataset
+
 ```bash
 python main.py 
 ```
