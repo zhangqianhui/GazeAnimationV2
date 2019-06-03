@@ -51,14 +51,17 @@ git clone https://github.com/zhangqianhui/GazeCorrection.git
 
   We have provided the self-guided pretraining model in directory: ./sg_pre_model_g
 
-- Train the model using the default parameter
+- Train this model using the your parameter
 
   (1)Please edit the config.py file to select the proper hyper-parameters.
-  (2)Change the "base_path" to your path of NewGaze dataset
-
-```bash
-python main.py 
-```
+  
+  (2)Change the "base_path" to your path of NewGaze dataset.
+  
+  Then
+  
+  ```bash
+  python main.py 
+  ```
 
 # Experiments results
 
