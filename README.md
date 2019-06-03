@@ -1,12 +1,12 @@
 # GazeCorrection:Self-Guided Eye Manipulation in the wild using Self-Supervised Generative Adversarial Networks
 The code of paper [GazeCorrection:Self-Guided Eye Manipulation in the wild using Self-Supervised Generative Adversarial Networks](https://arxiv.org/). 
 
+![](img/1.jpg)
+![](img/2.jpg)
+
 --------------------------------------------
 
 ### [Project page](https://nips2019.wixsite.com/gazegan) | [Paper](https://arxiv.org/) | 
-
-![](img/1.jpg)
-![](img/2.jpg)
 
 ![](img/gif/gif1/age.gif)
 ![](img/gif/gif2/age.gif)
