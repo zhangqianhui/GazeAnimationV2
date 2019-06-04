@@ -45,7 +45,8 @@ git clone https://github.com/zhangqianhui/GazeCorrection.git
 ```
 - Download the NewGaze dataset
 
-  Coming soon!!!
+  [Google Driver Linking](https://drive.google.com/open?id=1lYzpKdShN68RJGxRF1JgXnW-ved0F-mJ)
+  
 
 - Pretraining Model
 
@@ -84,8 +85,6 @@ git clone https://github.com/zhangqianhui/GazeCorrection.git
 ![](img/13.gif)
 ![](img/14.gif)
 ![](img/15.gif)
-
-
 
 # Reference code
 
