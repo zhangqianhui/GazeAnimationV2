@@ -40,17 +40,17 @@ from the website and will be introduced in details.
 ## Usage
 
 - Clone this repo:
-```bash
-git clone https://github.com/zhangqianhui/GazeCorrection.git
-```
+  ```bash
+  git clone https://github.com/zhangqianhui/GazeCorrection.git
+  ```
 - Download the NewGaze dataset
 
-  [Google Driver Linking](https://drive.google.com/open?id=1lYzpKdShN68RJGxRF1JgXnW-ved0F-mJ)
+  Download the tar of NewGaze dataset from [Google Driver Linking](https://drive.google.com/open?id=1lYzpKdShN68RJGxRF1JgXnW-ved0F-mJ).
   
-```bash
-cd your_path
-unzip NewGazeData.tar
-```
+  ```bash
+  cd your_path
+  unzip NewGazeData.tar
+  ```
 
 - Pretraining Model
 
