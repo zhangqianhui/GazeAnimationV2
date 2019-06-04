@@ -47,6 +47,10 @@ git clone https://github.com/zhangqianhui/GazeCorrection.git
 
   [Google Driver Linking](https://drive.google.com/open?id=1lYzpKdShN68RJGxRF1JgXnW-ved0F-mJ)
   
+```bash
+cd your_path
+unzip NewGazeData.tar
+```
 
 - Pretraining Model
 
@@ -56,7 +60,7 @@ git clone https://github.com/zhangqianhui/GazeCorrection.git
 
   (1)Please edit the config.py file to select the proper hyper-parameters.
   
-  (2)Change the "base_path" to your path of NewGaze dataset.
+  (2)Change the "base_path" to "your_path" of NewGaze dataset.
   
   Then
   
