@@ -99,23 +99,6 @@ from the website and will be introduced in details.
   <img src='img/15.gif'>
 </p>
 
-![](img/one.gif)
-![](img/two.gif)
-![](img/three.gif)
-![](img/four.gif)
-![](img/five.gif)
-![](img/six.gif)
-![](img/seven.gif)
-![](img/eight.gif)
-![](img/nine.gif)
-![](img/ten.gif)
-![](img/11.gif)
-![](img/12.gif)
-![](img/13.gif)
-![](img/14.gif)
-![](img/15.gif)
-
-
 # Reference code
 
 - [Sparsely_Grouped_GAN](https://github.com/zhangqianhui/Sparsely-Grouped-GAN)
