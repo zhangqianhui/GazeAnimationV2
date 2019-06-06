@@ -33,9 +33,10 @@ from the website and will be introduced in details.
 ## 
 
 ## Dependencies
+
 * [Python 2.7](https://www.python.org/download/releases/2.7/)
 * [Tensorflow 1.4+](https://github.com/tensorflow/tensorflow)
-
+* [numpy](http://www.numpy.org/)
 
 ## Usage
 
