@@ -83,6 +83,8 @@ from the website and will be introduced in details.
 
 <p align="center">
   <img src='img/one.gif'>
+  <img src='img/one.gif'>
+  <img src='img/one.gif'>
 </p>
 
 ![](img/one.gif)
