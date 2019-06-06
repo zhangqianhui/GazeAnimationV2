@@ -83,8 +83,20 @@ from the website and will be introduced in details.
 
 <p align="center">
   <img src='img/one.gif'>
-  <img src='img/one.gif'>
-  <img src='img/one.gif'>
+  <img src='img/two.gif'>
+  <img src='img/three.gif'>
+  <img src='img/four.gif'>
+  <img src='img/five.gif'>
+  <img src='img/six.gif'>
+  <img src='img/seven.gif'>
+  <img src='img/eight.gif'>
+  <img src='img/nine.gif'>
+  <img src='img/ten.gif'>
+  <img src='img/11.gif'>
+  <img src='img/12.gif'>
+  <img src='img/13.gif'>
+  <img src='img/14.gif'>
+  <img src='img/15.gif'>
 </p>
 
 ![](img/one.gif)
