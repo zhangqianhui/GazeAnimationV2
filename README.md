@@ -69,9 +69,15 @@ from the website and will be introduced in details.
   python main.py 
   ```
 
-# Experiments results
+## Experiments
 
-![](img/exp1.jpg)
+- Comparison Results 
+
+ ![](img/exp2.jpg)
+ 
+- Experiments Results 
+
+ ![](img/exp1.jpg)
 
 # More results(GiF)
 
