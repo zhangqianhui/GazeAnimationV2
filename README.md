@@ -1,5 +1,5 @@
 # GazeCorrection:Self-Guided Eye Manipulation in the wild using Self-Supervised Generative Adversarial Networks
-The code of paper [GazeCorrection:Self-Guided Eye Manipulation in the wild using Self-Supervised Generative Adversarial Networks](https://arxiv.org/). 
+The code of paper [GazeCorrection:Self-Guided Eye Manipulation in the wild using Self-Supervised Generative Adversarial Networks](https://arxiv.org/abs/1906.00805). 
 
 <center> 
 
@@ -10,7 +10,7 @@ The code of paper [GazeCorrection:Self-Guided Eye Manipulation in the wild using
 
 --------------------------------------------
 
-### [Project page](https://nips2019.wixsite.com/gazegan) | [Paper](https://arxiv.org/) | 
+### [Project page](https://nips2019.wixsite.com/gazegan) | [Paper](https://arxiv.org/abs/1906.00805) | 
 
 # Abstract
 Gaze correction aims to redirect the person's gaze into the camera by manipulating the eye region, and
@@ -33,29 +33,41 @@ from the website and will be introduced in details.
 ## 
 
 ## Dependencies
+
 * [Python 2.7](https://www.python.org/download/releases/2.7/)
 * [Tensorflow 1.4+](https://github.com/tensorflow/tensorflow)
-
+* [numpy](http://www.numpy.org/)
 
 ## Usage
 
 - Clone this repo:
-```bash
-git clone https://github.com/zhangqianhui/GazeCorrection.git
-```
+  ```bash
+  git clone https://github.com/zhangqianhui/GazeCorrection.git
+  ```
 - Download the NewGaze dataset
 
-Coming soon!!!
+  Download the tar of NewGaze dataset from [Google Driver Linking](https://drive.google.com/open?id=1lYzpKdShN68RJGxRF1JgXnW-ved0F-mJ).
+  
+  ```bash
+  cd your_path
+  unzip NewGazeData.tar
+  ```
 
 - Pretraining Model
 
-- Coming soon!!!
+  We have provided the self-guided pretraining model in directory: ./sg_pre_model_g
 
-- Train the model using the default parameter
+- Train this model using the your parameter
 
-```bash
-python main.py 
-```
+  (1)Please edit the config.py file to select the proper hyper-parameters.
+  
+  (2)Change the "base_path" to "your_path" of NewGaze dataset.
+  
+  Then
+  
+  ```bash
+  python main.py 
+  ```
 
 # Experiments results
 
@@ -78,8 +90,6 @@ python main.py
 ![](img/13.gif)
 ![](img/14.gif)
 ![](img/15.gif)
-
-
 
 # Reference code
 
