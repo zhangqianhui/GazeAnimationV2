@@ -9,7 +9,7 @@ The code of paper [GazeCorrection:Self-Guided Eye Manipulation in the wild using
 
 --------------------------------------------
 
-### [Project page](https://nips2019.wixsite.com/gazegan) | [Paper](https://arxiv.org/abs/1906.00805) | 
+Paper](https://arxiv.org/abs/1906.00805) | 
 
 # Abstract
 Gaze correction aims to redirect the person's gaze into the camera by manipulating the eye region, and
