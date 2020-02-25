@@ -616,7 +616,11 @@ class Gaze_GAN(object):
                 self.MODEL_DIR, 'classify_image_graph_def.pb'), 'rb') as f:
             graph_def = tf.GraphDef()
             graph_def.ParseFromString(f.read())
-            _ = tf.import_graph_def(graph_def, name='')
+            input_tensor = tf.placeholder(tf.float32, shape=[None, None, None, 3],
+                                  name='InputTensor')
+    	    _ = tf.import_graph_def(graph_def, name='',
+                            input_map={'ExpandDims:0':input_tensor})
+		
         # Works with an arbitrary minibatch size.
 
         config = tf.ConfigProto()
@@ -637,10 +641,10 @@ class Gaze_GAN(object):
                             new_shape.append(None)
                         else:
                             new_shape.append(s)
-                    o._shape = tf.TensorShape(new_shape)
+                    o.set_shape(tf.TensorShape(new_shape))
 
             w = sess.graph.get_operation_by_name("softmax/logits/MatMul").inputs[1]
-            logits = tf.matmul(tf.squeeze(pool3), w)
+            logits = tf.matmul(tf.squeeze(pool3,[1,2]), w)
 
             self.softmax = tf.nn.softmax(logits)
             self.pool3 = pool3
@@ -681,9 +685,9 @@ class Gaze_GAN(object):
                                             self.local_recon_img_right
                                             ], feed_dict=f_d)
 
-            pred1 = sess.run(self.softmax, {'ExpandDims:0': self.transform_image(validate_output_img[2])})
+            pred1 = sess.run(self.softmax, {'InputTensor:0': self.transform_image(validate_output_img[2])})
             preds1.append(pred1)
-            pred2 = sess.run(self.softmax, {'ExpandDims:0': self.transform_image(validate_output_img[3])})
+            pred2 = sess.run(self.softmax, {'InputTensor:0': self.transform_image(validate_output_img[3])})
             preds2.append(pred2)
 
         preds1 = np.concatenate(preds1, 0)
@@ -738,15 +742,15 @@ class Gaze_GAN(object):
                                             self.local_recon_img_right
                                             ], feed_dict=f_d)
 
-            pred = sess.run(self.pool3, {'ExpandDims:0': self.transform_image(validate_output_img[2])})
+            pred = sess.run(self.pool3, {'InputTensor:0': self.transform_image(validate_output_img[2])})
             pred_arr1[start:end] = pred.reshape(bs, -1)
-            pred = sess.run(self.pool3, {'ExpandDims:0': self.transform_image(validate_output_img[3])})
+            pred = sess.run(self.pool3, {'InputTensor:0': self.transform_image(validate_output_img[3])})
             pred_arr2[start:end] = pred.reshape(bs, -1)
             # Get the activations for real sampels
-            pred2 = sess.run(self.pool3, {'ExpandDims:0': self.transform_image(validate_output_img[0])})
+            pred2 = sess.run(self.pool3, {'InputTensor:0': self.transform_image(validate_output_img[0])})
             pred_arr_r[start:end] = pred2.reshape(bs, -1)
 
-            pred2 = sess.run(self.pool3, {'ExpandDims:0': self.transform_image(validate_output_img[1])})
+            pred2 = sess.run(self.pool3, {'InputTensor:0': self.transform_image(validate_output_img[1])})
             pred_arr_r2[start:end] = pred2.reshape(bs, -1)
 
         g_mu1 = np.mean(pred_arr1, axis=0)
@@ -776,7 +780,6 @@ class Gaze_GAN(object):
         f = open('{}/fid_socre_log2.txt'.format(self.evaluation_path), 'a')  # append write
         f.writelines('{:04}:{}: {}\n'.format(step, str(np.real(dist1)), str(np.real(dist2))))
         f.close()
-
 
 
 
