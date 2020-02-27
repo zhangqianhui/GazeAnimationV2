@@ -24,8 +24,8 @@ class Dataset(object):
         else:
             self.train_images_list, self.train_eye_pos,self.test_images_list, self.test_eye_pos, self.test_num = self.readfilenames_clumbia()
         #self.train_images_list, self.train_eye_pos, self.test_images_list, self.test_eye_pos, self.test_num = self.readfilenames()
-        print "Numbers of dataset for training and testing", len(self.train_images_list), len(self.train_eye_pos), \
-            len(self.test_images_list), len(self.test_eye_pos)
+        print("Numbers of dataset for training and testing", len(self.train_images_list), len(self.train_eye_pos), \
+            len(self.test_images_list), len(self.test_eye_pos))
 
     def readfilenames(self):
 
@@ -147,11 +147,11 @@ def imsave(images, size, path):
 def inverse_transform(image, is_ouput=False):
 
     if is_ouput == True:
-        print image[0]
+        print(image[0])
     result = ((image + 1) * 127.5).astype(np.uint8)
 
     if is_ouput == True:
-        print result
+        print(result)
     return result
 
 def merge(images, size):
