@@ -197,7 +197,7 @@ class Gaze_GAN(object):
                 self.saver.restore(sess, ckpt.model_checkpoint_path)
                 print('Load Succeed!')
             else:
-                print 'Do not exists any checkpoint,Load Failed!'
+                print('Do not exists any checkpoint,Load Failed!')
                 exit()
 
             _,_,_, testbatch, testmask = self.dataset.input()
@@ -350,7 +350,7 @@ class Gaze_GAN(object):
             coord.request_stop()
             coord.join(threads)
 
-            print "Model saved in file: %s" % save_path
+            print("Model saved in file: %s" % save_path)
 
     def discriminator(self, incom_x, local_x_left, local_x_right, guided_fp_left, guided_fp_right, reuse=False):
 
