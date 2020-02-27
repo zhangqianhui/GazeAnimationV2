@@ -1,5 +1,5 @@
 import os
-import scipy.misc
+import imageio
 import numpy as np
 import tensorflow as tf
 
@@ -142,7 +142,7 @@ def save_images(images, size, image_path, is_ouput=False):
     return imsave(inverse_transform(images, is_ouput), size, image_path)
 
 def imsave(images, size, path):
-    return scipy.misc.imsave(path, merge(images, size))
+    return imageio.imsave(path, merge(images, size))
 
 def inverse_transform(image, is_ouput=False):
 
