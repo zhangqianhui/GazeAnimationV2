@@ -33,7 +33,7 @@ from the website and will be introduced in details.
 
 ## Dependencies
 
-* [Python 2.6](https://www.python.org/download/releases/2.7/)
+* [Python 3.6](https://www.python.org/download/releases/2.7/)
 * [Tensorflow 1.9+](https://github.com/tensorflow/tensorflow)
 
 ```bash
