@@ -408,17 +408,6 @@ class Gaze_GAN(object):
 
         return np.array(batch_mask), np.array(batch_left_eye_pos), np.array(batch_right_eye_pos)
 
-    def get_data_feeded(self, sess, train_images, train_eye_pos):
-
-        real_batch_image, real_eye_pos = sess.run([train_images, train_eye_pos])
-        batch_masks, batch_left_eye_pos, batch_right_eye_pos = self.get_Mask_and_pos(real_eye_pos)
-
-        f_d = {self.x: real_batch_image,
-               self.xm: batch_masks,
-               self.x_left_p: batch_left_eye_pos,
-               self.x_right_p: batch_right_eye_pos}
-
-        return f_d
 
 
 
