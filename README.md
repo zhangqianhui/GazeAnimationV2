@@ -33,9 +33,13 @@ from the website and will be introduced in details.
 
 ## Dependencies
 
-* [Python 2.7](https://www.python.org/download/releases/2.7/)
-* [Tensorflow 1.4+](https://github.com/tensorflow/tensorflow)
-* [numpy](http://www.numpy.org/)
+* [Python 2.6](https://www.python.org/download/releases/2.7/)
+* [Tensorflow 1.9+](https://github.com/tensorflow/tensorflow)
+
+```bash
+pip install -r requirements.txt
+```
+
 
 ## Usage
 
@@ -51,6 +55,8 @@ from the website and will be introduced in details.
   cd your_path
   unzip NewGazeData.tar
   ```
+  
+  Please edit the options.py to change your dataset path
 
 - Pretraining Model
 
@@ -65,8 +71,16 @@ from the website and will be introduced in details.
   Then
   
   ```bash
-  python main.py 
+  python main.py --use_sp --is_ss --gpu_id=0
   ```
+  
+  or 
+    
+  ```bash
+  bash scripts/train_log20_3_26.sh
+  ```
+  
+  
 
 ## Experiments
 
