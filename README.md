@@ -112,6 +112,17 @@ pip install -r requirements.txt
   <img src='img/15.gif'>
 </p>
 
+## Citation
+If you find this work useful for your research, please cite our [paper](https://arxiv.org/abs/1711.09020):
+```
+@article{zhang2019gazecorrection,
+  title={GazeCorrection: Self-Guided Eye Manipulation in the wild using Self-Supervised Generative Adversarial Networks},
+  author={Zhang, Jichao and Sun, Meng and Chen, Jingjing and Tang, Hao and Yan, Yan and Qin, Xueying and Sebe, Nicu},
+  journal={arXiv preprint arXiv:1906.00805},
+  year={2019}
+}
+```
+
 # Reference code
 
 - [Sparsely_Grouped_GAN](https://github.com/zhangqianhui/Sparsely-Grouped-GAN)
