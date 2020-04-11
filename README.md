@@ -113,7 +113,7 @@ pip install -r requirements.txt
 </p>
 
 ## Citation
-If you find this work useful for your research, please cite our [paper](https://arxiv.org/abs/1711.09020):
+If you find this work useful for your research, please cite our paper:
 ```
 @article{zhang2019gazecorrection,
   title={GazeCorrection: Self-Guided Eye Manipulation in the wild using Self-Supervised Generative Adversarial Networks},
