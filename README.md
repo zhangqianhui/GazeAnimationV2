@@ -24,6 +24,17 @@ we propose a self-guided pretrained model to learn the angle-invariance feature.
 Experiments show our model achieves very compelling gaze-corrected results in the wild dataset which is collected
 from the website and will be introduced in details. 
 
+## Citation
+If you find this work useful for your research, please cite our paper:
+```
+@article{zhang2019gazecorrection,
+  title={GazeCorrection: Self-Guided Eye Manipulation in the wild using Self-Supervised Generative Adversarial Networks},
+  author={Zhang, Jichao and Sun, Meng and Chen, Jingjing and Tang, Hao and Yan, Yan and Qin, Xueying and Sebe, Nicu},
+  journal={arXiv preprint arXiv:1906.00805},
+  year={2019}
+}
+```
+
 ## Network Architecture
 
 ![](img/model.png)
@@ -112,16 +123,6 @@ pip install -r requirements.txt
   <img src='img/15.gif'>
 </p>
 
-## Citation
-If you find this work useful for your research, please cite our paper:
-```
-@article{zhang2019gazecorrection,
-  title={GazeCorrection: Self-Guided Eye Manipulation in the wild using Self-Supervised Generative Adversarial Networks},
-  author={Zhang, Jichao and Sun, Meng and Chen, Jingjing and Tang, Hao and Yan, Yan and Qin, Xueying and Sebe, Nicu},
-  journal={arXiv preprint arXiv:1906.00805},
-  year={2019}
-}
-```
 
 # Reference code
 
