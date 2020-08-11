@@ -54,14 +54,14 @@ class Gaze_GAN(object):
                                    SSCE(labels=tf.ones(shape=[self.opt.batch_size], dtype=tf.int32), logits=self.g_logits_right)
 
         else:
-            self.D_real_gan_logits = self.D(self.x, self.xl_left, self.xl_right,
+            self.d_logits = self.D(self.x, self.xl_left, self.xl_right,
                                                         self.xl_left_fp, self.xl_right_fp)
-            self.D_fake_gan_logits = self.D(self.y, self.yl_left, self.yl_right,
+            self.g_logits = self.D(self.y, self.yl_left, self.yl_right,
                                                         self.yl_left_fp, self.yl_right_fp)
 
         d_loss_fun, g_loss_fun = get_adversarial_loss(self.opt.loss_type)
-        self.d_gan_loss = d_loss_fun(self.D_real_gan_logits, self.D_fake_gan_logits)
-        self.g_gan_loss = g_loss_fun(self.D_fake_gan_logits)
+        self.d_gan_loss = d_loss_fun(self.d_logits, self.g_logits)
+        self.g_gan_loss = g_loss_fun(self.g_logits)
 
         self.percep_loss = L1(self.xl_left_fp, self.yl_left_fp) + L1(self.xl_right_fp, self.yl_right_fp)
         self.recon_loss = tf.reduce_mean(tf.reduce_sum(tf.abs(self.y - self.x),
