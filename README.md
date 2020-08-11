@@ -127,7 +127,7 @@ pip install -r requirements.txt
 
 # Reference code
 
-- [Sparsely_Grouped_GAN](https://github.com/zhangqianhui/Sparsely-Grouped-GAN)
+- [Sparsely Grouped Multi-task Generative Adversarial Networks for Facial Attribute Manipulation](https://github.com/zhangqianhui/Sparsely-Grouped-GAN)
 
 - [DCGAN tensorflow](https://github.com/carpedm20/DCGAN-tensorflow)
 
