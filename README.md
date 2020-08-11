@@ -1,5 +1,5 @@
 # GazeCorrection:Self-Guided Eye Manipulation in the wild using Self-Supervised Generative Adversarial Networks
-# V2 version can be found in https://github.com/zhangqianhui/GazeAnimation
+# V2 version can be found in [GazeAnimation](https://github.com/zhangqianhui/GazeAnimation)
 The code of paper [GazeCorrection:Self-Guided Eye Manipulation in the wild using Self-Supervised Generative Adversarial Networks](https://arxiv.org/abs/1906.00805). 
 
 <p align="center">
