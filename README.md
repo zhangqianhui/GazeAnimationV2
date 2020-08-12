@@ -94,7 +94,7 @@ pip install -r requirements.txt
   
 - Test this model 
   
-  You can download the pretrained model from [Google Driver Linking](https://drive.google.com/open?id=1lYzpKdShN68RJGxRF1JgXnW-ved0F-mJ).
+  You can download the pretrained model from [Google Driver Linking](https://drive.google.com/file/d/1Gt0tRGmEKwxyC8UVDrVT2qUnWgt2f6LF/view?usp=sharing).
   
    
   ```bash
