@@ -70,11 +70,11 @@ pip install -r requirements.txt
   
   Please edit the options.py to change your dataset path
 
-- Pretraining Model
+- Pretrained Self-Guided Model
 
   We have provided the self-guided pretraining model in directory: ./sg_pre_model_g
 
-- Train this model using the your parameter
+- Train this model 
 
   (1)Please edit the config.py file to select the proper hyper-parameters.
   
@@ -83,17 +83,30 @@ pip install -r requirements.txt
   Then
   
   ```bash
-  python main.py --use_sp --is_ss --gpu_id=0
+  python train.py --use_sp --is_ss --gpu_id='0' --exper_name='log3_25_1' --batch_size=8 --test_sample_dir='test_sample_dir'
   ```
   
   or 
     
   ```bash
-  bash scripts/train_log20_3_26.sh
+  bash scripts/train_log20_3_25_1.sh
   ```
   
+- Test this model 
   
-
+  You can download the pretrained model from [Google Driver Linking](https://drive.google.com/open?id=1lYzpKdShN68RJGxRF1JgXnW-ved0F-mJ).
+  
+   
+  ```bash
+  python test.py --gpu_id='0' --exper_name='log3_25_1' --batch_size=8 --test_sample_dir='test_sample_dir'
+  ```
+  
+  or 
+    
+  ```bash
+  bash scripts/test_log20_3_25_1.sh
+  ```
+  
 ## Experiments
 
 - Comparison Results 
