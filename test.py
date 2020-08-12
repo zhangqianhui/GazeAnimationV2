@@ -15,5 +15,5 @@ if __name__ == "__main__":
 
     dataset = Dataset(opt)
     gaze_gan = Gaze_GAN(dataset, opt)
-    gaze_gan.build_model()
+    gaze_gan.build_test_model()
     gaze_gan.test()

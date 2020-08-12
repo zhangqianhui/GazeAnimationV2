@@ -75,6 +75,15 @@ class Gaze_GAN(object):
             self.D_loss = self.d_gan_loss
             self.G_loss = self.g_gan_loss + self.opt.lam_r * self.recon_loss + self.opt.lam_p * self.percep_loss
 
+    def build_test_model(self):
+        self.xc = self.x * (1 - self.xm)
+        self.xl_left, self.xl_right = self.crop_resize(self.x, self.x_left_p, self.x_right_p)
+        self.xl_left_fp = self.encode(self.xl_left)
+        self.xl_right_fp = self.encode(self.xl_right)
+        self.yo = self.G(self.xc, self.xm, self.xl_left_fp, self.xl_right_fp, use_sp=False)
+        self.y = self.xc + self.yo * self.xm
+
+
     def crop_resize(self, input, boxes_left, boxes_right):
 
         shape = [int(item) for item in input.shape.as_list()]
@@ -88,6 +97,7 @@ class Gaze_GAN(object):
         init = tf.global_variables_initializer()
         config = tf.ConfigProto()
         config.gpu_options.allow_growth = True
+        self.saver = tf.train.Saver()
 
         with tf.Session(config=config) as sess:
             sess.run(init)
@@ -105,19 +115,17 @@ class Gaze_GAN(object):
             threads = tf.train.start_queue_runners(sess=sess, coord=coord)
 
             batch_num = 1000 / self.opt.batch_size
-            for j in range(batch_num):
+            for j in range(int(batch_num)):
                 real_test_batch, real_eye_pos = sess.run([testbatch, testmask])
                 batch_masks, batch_left_eye_pos, batch_right_eye_pos = self.get_Mask_and_pos(real_eye_pos)
                 f_d = {self.x: real_test_batch,
                        self.xm: batch_masks,
                        self.x_left_p: batch_left_eye_pos,
                        self.x_right_p: batch_right_eye_pos}
-
-                for i in range(self.opt.batch_size):
-
-                    output = sess.run([self.x, self.y], feed_dict=f_d)
-                    output_concat = self.Transpose(np.array([output[0], output[1]]))
-                    save_images(np.reshape(output_concat, '{}/{:02d}_{:2d}.jpg'.format(self.opt.test_sample_dir, j, i)))
+                
+                output = sess.run([self.x, self.y], feed_dict=f_d)
+                output_concat = self.Transpose(np.array([output[0], output[1]]))
+                save_images(output_concat, '{}/{:02d}.jpg'.format(self.opt.test_sample_dir, j))
 
             coord.request_stop()
             coord.join(threads)
