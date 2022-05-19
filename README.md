@@ -1,7 +1,7 @@
 ## GazeAnimationV2 - Official Tensorflow Implementation
 
 > ***Unsupervised High-Resolution Portrait Gaze Correction and Animation***<br>
-> Jichao Zhang, Jingjing Chen, [Hao Tang](https://ha0tang.github.io/), [Enver Sangineto](https://disi.unitn.it/~enver.sangineto/index.html), Yan Yan, Peng Wu, [Nicu Sebe](http://disi.unitn.it/~sebe/), [Wei Wang](https://weiwangtrento.github.io/).
+> Jichao Zhang, Jingjing Chen, Hao Tang, Enver Sangineto, Yan Yan, Peng Wu, [Nicu Sebe](http://disi.unitn.it/~sebe/), [Wei Wang](https://weiwangtrento.github.io/).
 
 ## Dependencies
 
