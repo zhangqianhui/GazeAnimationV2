@@ -1,7 +1,7 @@
 ## GazeAnimationV2 - Official Tensorflow Implementation (TIP)
 
-> ***Unsupervised High-Resolution Portrait Gaze Correction and Animation***<br>
-> Paper: hhttps://arxiv.org/abs/2207.00256 <br>
+> ***Unsupervised High-Resolution Portrait Gaze Correction and Animation*** <br>
+> Paper: https://arxiv.org/abs/2207.00256 <br>
 
 ## Dependencies
 
@@ -52,10 +52,6 @@ tar -xvf CelebHQGaze.tar
 ### Gaze Correction on CelebHQGaze
 
 <p align="center"><img width="100%" src="img/correction.jpg" /></p>
-
-# Related works
-
-- [PA-GAN: Progressive Attention Generative Adversarial Network for Facial Attribute Editing](https://github.com/LynnHo/PA-GAN-Tensorflow)
 
 ```
 @article{zhang2022unsupervised,
