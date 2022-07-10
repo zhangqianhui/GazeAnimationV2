@@ -46,10 +46,9 @@ cd your_path
 tar -xvf CelebHQGaze.tar
 ```
 
-
 ## Experiment Result 
 
-### Gaze Correction on CelebHQGaze
+### Gaze Correction on CelebAHQGaze
 
 <p align="center"><img width="100%" src="img/correction.jpg" /></p>
 
