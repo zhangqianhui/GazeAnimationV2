@@ -1,4 +1,4 @@
-## GazeAnimationV2 - Official Tensorflow Implementation (TIP)
+## GazeAnimationV2 - Official Pytorch Implementation (TIP)
 
 > ***Unsupervised High-Resolution Portrait Gaze Correction and Animation*** <br>
 > Paper: https://arxiv.org/abs/2207.00256 <br>
